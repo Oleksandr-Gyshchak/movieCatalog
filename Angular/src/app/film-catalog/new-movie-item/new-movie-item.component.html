@@ -1,0 +1,34 @@
+<div class="login-wrapper container" *ngIf="filmForm">
+  <form [formGroup]="filmForm" class="login" (ngSubmit)="sendData()">
+    <h5 class="hint">Для работы с системой необходимо авторизоваться</h5>
+    <div class="login-group">
+
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Title" type="text" id="movie_title" placeholder="title" name="title"
+            formControlName="title">
+        </mat-form-field>
+
+      </div>
+      <p></p>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" id="releaseYear" placeholder="releaseYear" name="releaseYear" formControlName="releaseYear">
+        </mat-form-field>
+      </div>
+      <p></p>
+
+      <p><select size="3" formControlName="format">
+          <option selected value="DVD">DVD</option>
+          <option value="VHS">VHS</option>
+          <option value="Blu-Ray">Blu-Ray</option>
+        </select></p>
+
+      <div>
+        <p></p>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+
+    </div>
+  </form>
+</div>

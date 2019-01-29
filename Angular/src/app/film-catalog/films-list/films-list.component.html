@@ -1,0 +1,23 @@
+<div class="wrapper" *appSpinner="preload">
+  <div class='buttom-group'>
+    <button mat-raised-button color="primary" (click)="navigateCreateMovie()">Create new movie</button>
+    <button mat-raised-button color="accent" (click)="navigateImportMovies()">Import file</button>
+
+  </div>
+
+  <ng-template #alertBlock>
+    <mat-error>
+      {{ error }}
+    </mat-error>
+  </ng-template>
+
+  <div *ngIf="filmsList; else alertBlock">
+    <mat-grid-list cols="4" rowHeight="740px">
+      <mat-grid-tile colspan="1" *ngFor="let film of filmsList">
+        <app-film-item [film]="film"></app-film-item>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <app-pagination *ngIf="filmsList" [currentPage]="page" [lastPage]="lastPage" (page)="getNextPage($event)"></app-pagination>
+  </div>
+</div>

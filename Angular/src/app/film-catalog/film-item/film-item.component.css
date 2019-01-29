@@ -1,0 +1,29 @@
+.film-header-image {
+  background-image: url('./assets/1.png');
+  background-size: cover;
+}
+
+.film-image {
+  height: 60%;
+  width: 100%;
+  max-width: 240px;
+}
+
+.film-card {
+  height: 640px;
+  margin: 10px;
+  max-width: 440px;
+}
+
+mat-card-header {
+  height: 18%;
+}
+
+mat-card-content {
+  height: 15%;
+}
+
+mat-card-actions {
+  height: 10%;
+  padding: 0px;
+}

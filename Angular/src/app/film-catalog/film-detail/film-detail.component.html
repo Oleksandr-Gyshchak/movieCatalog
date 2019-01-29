@@ -1,0 +1,11 @@
+<div class="wrapper" *appSpinner="preload">
+
+  <ng-template #alertBlock>
+    <mat-error>
+      {{ error }}
+    </mat-error>
+  </ng-template>
+
+  <app-film-item [film]="film"></app-film-item>
+
+</div>

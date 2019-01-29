@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-wrapper .login .login-group .btn {
+  margin-top: 2rem;
+}
+
+.error-message {
+  color: red;
+}

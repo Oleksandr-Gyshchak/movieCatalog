@@ -97,7 +97,8 @@ const findOneMovie = async function (req, res, next) {
             _id: req.params.movieID
         };
 
-        const movieItem = await MovieModel.findOne(conditionQuery);
+        const movieItem = await MovieModel.findOne(conditionQuery).populate(
+            'starsList');
 
         if (!movieItem) {
             res.status(400).json({

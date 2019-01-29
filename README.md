@@ -9,32 +9,37 @@ Run
 Navigate to http://localhost:3000/. The app will automatically reload if you change any of the source files.
 
 
+Angular
+
+1) npm install
+2) ng serve
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+ The app will automatically reload if you change any of the source files.
+
+
+
+
+
+
 Routes
 
-
 //Добавить фильм 
-post 'api/movie'
+post ('api/movie'
 
 //Удалить фильм
-router.delete('/movie/:movieID', movieController.removeMovie);
+delete('api/movie/:movieID'
 //Показать информацию о фильме
-router.get('/movie/:movieID', movieController.findOneMovie);
+get('api/movie/:movieID'
 
 // Получить список фильмов
-router.get('/movie', movieController.getMovieList);
+.get('api/movie'
 
-//Найти фильм 
-router.get('/search/global', movieController.searchMovies);
-//Редактировать информацию о фильме
-router.patch('/movie/:movieID', movieController.editMovie);
+//Найти фильм full text search/ part text search
+get('/search/global'
 
-
-router.patch('/import', saveTxtFile, importTXTController);
-
-//Добавить актера 
-router.post('/actor', actorController.addNewActor);
-router.post(':movieID/actor', actorController.addNewActor);
-
+//Импорт
+patch('api/import'
 
 
 

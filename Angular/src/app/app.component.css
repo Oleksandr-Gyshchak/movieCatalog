@@ -1,0 +1,17 @@
+.example-icon {
+  padding: 0 5px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  color: white;
+  background-color: rgba(16, 19, 26, 0.9)
+}
+
+.active {
+  border: 2px;
+  color: #01d277;
+}
